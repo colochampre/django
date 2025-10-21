@@ -1,5 +1,5 @@
 """
-ASGI config for django_snake project.
+ASGI config for directorio_docente project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_snake.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'directorio_docente.settings')
 
 application = get_asgi_application()
