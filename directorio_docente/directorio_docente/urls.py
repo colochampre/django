@@ -21,5 +21,6 @@ from .views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
-    path('gestion_docentes/', include(('gestion_docentes.urls', 'gestion_docentes'), namespace='gestion_docentes')),
+    #path('gestion_docentes/', include(('gestion_docentes.urls', 'gestion_docentes'), namespace='gestion_docentes')),
+    #path('gestion_materias/', include(('gestion_materias.urls', 'gestion_materias'), namespace='gestion_materias')),
 ]
