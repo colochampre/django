@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio Docente</title>
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block others_css %}{% endblock %}
 </head>
 <body>
     <header class="header">
         <h1>Directorio Docente</h1>
         <nav class="nav">
             <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'gestion_docentes:lista' %}">Docentes</a></li>
+                <li class="boton"><a href="{% url 'home' %}">Home</a></li>
+                <li class="boton"><a href="{% url 'gestion_docentes:lista' %}">Docentes</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         {% block content %}
         {% endblock %}
     </main>
+
     <footer>
         <p>© 2025 Directorio Docente.</p>
     </footer>
