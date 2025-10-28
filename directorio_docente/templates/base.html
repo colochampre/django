@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directorio Docente</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Directorio Docente</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'gestion_docentes:lista' %}">Docentes</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'gestion_docentes:lista' %}">Docentes</a></li>
-        </ul>
-    </nav>
     <main>
         {% block content %}
         {% endblock %}
